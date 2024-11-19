@@ -25,7 +25,7 @@ def capture_exception(sender, request=None, **kwargs):
     
     try:
         response = requests.post(
-            "http://43.204.216.93:8080/logs",
+            "http://43.204.216.93/logs",
             json=payload,
             headers=headers,
             timeout=5
