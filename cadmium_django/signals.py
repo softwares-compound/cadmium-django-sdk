@@ -22,7 +22,7 @@ def capture_exception(sender, request=None, **kwargs):
 
     try:
         response = requests.post(
-            "http://65.2.167.52:8080",
+            "http://localhost:8080",
             json=payload,
             headers=headers,
             timeout=5
