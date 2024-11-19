@@ -8,7 +8,6 @@ from django.conf import settings
 logger = logging.getLogger(__name__)
 
 def capture_exception(sender, request=None, **kwargs):
-    
     # Use sys.exc_info() to get the current exception
     exc_type, exc_value, exc_traceback = sys.exc_info()
 
@@ -26,7 +25,7 @@ def capture_exception(sender, request=None, **kwargs):
     
     try:
         response = requests.post(
-            "http://65.2.167.52:8080",
+            "http://43.204.216.93:8080/logs",
             json=payload,
             headers=headers,
             timeout=5
