@@ -34,7 +34,7 @@ class CadmiumMiddleware:
 
         try:
             requests.post(
-                "http://localhost:8080",
+                "http://65.2.167.52:8080",
                 json=payload,
                 headers=headers,
                 timeout=5
