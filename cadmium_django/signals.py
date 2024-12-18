@@ -24,14 +24,14 @@ def capture_exception(sender, request=None, **kwargs):
     }
     
     try:
-        requests.post(
+        response = requests.post(
             "https://cadmium.softwarescompound.in/logs",
             json=payload,
             headers=headers,
             timeout=5
         )
 
-        print(response.text)
+        
         response.raise_for_status()
     except requests.RequestException as e:
         logger.error(f"Failed to send error to Cadmium server: {e}")
