@@ -34,10 +34,11 @@ class CadmiumMiddleware:
 
         try:
             requests.post(
-                "http://43.204.216.93/logs",
+                "https://cadmium.softwarescompound.in/logs",
                 json=payload,
                 headers=headers,
                 timeout=5
             )
+
         except requests.RequestException as e:
             logger.error(f"Failed to send error to Cadmium server: {e}")
